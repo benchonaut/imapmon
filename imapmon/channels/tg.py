@@ -1,7 +1,11 @@
 from click import BadOptionUsage
 from bs4 import BeautifulSoup
 from imap_tools import MailMessage
-from telegram import Bot, ParseMode
+# from telegram import Bot, ParseMode # https://stackoverflow.com/a/74180161 # as per Version 20 you need to use:
+from telegram.constants import ParseMode
+from telegram import Bot
+
+
 
 from imapmon.settings import Settings
 from imapmon.channels.base import BaseChannel
