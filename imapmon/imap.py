@@ -4,6 +4,7 @@ import typing
 
 from click import BadOptionUsage
 from imap_tools import MailBox, A
+from os import eviron
 
 from imapmon.channels.base import BaseChannel
 from imapmon.channels.tg import TelegramChannel
@@ -46,3 +47,8 @@ class IMAPClient:
             else:
                 for _, channel in self.channels.items():
                     channel.message(msg)
+            
+            if environ.get('DELETE_READ_MAIL') is not None:
+                self.mailbox.delete([msg.uid])
+        if environ.get('DELETE_READ_MAIL') is not None:
+            self.mailbox.expunge()
