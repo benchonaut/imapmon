@@ -31,6 +31,7 @@ Some options can be set via an environment variable (real or [dotenv](https://gi
 | `TELEGRAM_CHAT_ID` | `--telegram-chat-id` | ☑️/✖️ | Telegram Chat ID (channel ID, group ID or @username) |
 | `SENTRY_DSN` | `--sentry-dsn` | ✖️ | Sentry DSN |
 | `LOG_LEVEL` | `--log-level`/`-l` | ✖️ | Log level for console messages |
+| `DELETE_READ_MAIL` | not yet implemented | ✖️ | Delete seen mails |
 
 ## Examples
 
